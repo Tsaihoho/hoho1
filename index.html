@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch14. SPA-形象網製作(HOHO手工水餃有限公司)</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mycss.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <style>
+        .timeline-section {
+            position: relative;
+        }
+
+        .timeline-section::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            background-color: #008040;
+            width: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .caption-text {
+            background-color: rgb(0, 0, 0, 0.3);
+        }
+
+        .text-cover {
+            background-color: rgb(0, 0, 0, 0.3);
+        }
+
+        .timeline-section-pointer {
+            position: relative;
+        }
+
+        .timeline-section-pointer::before {
+            position: absolute;
+            content: "";
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(243, 241, 245);
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid#555455;
+        }
+
+
+        @media screen and (max-width: 768px) {
+
+            .text-s07,
+            .text-s09 {
+                z-index: 10;
+                background-color: rgb(0, 0, 0, 0.3);
+                color: aliceblue;
+                margin: 15px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <!--section 01-->
+
+    <body class="bg-light">
+        <!-- section 01 -->
+        <section id="s01" class="bg-secondary">
+            <div class="container">
+                <div class="text-end">
+                    <a href="#"></a><i class="fa-brands fa-square-facebook text-primary"></i>
+                    <a href="#"></a><i class="fa-brands fa-square-x-twitter text-bg-danger"></i>
+                    <a href="#"></a><i class="fa-brands fa-threads text-dark"></i>
+                    <a href=""></a><i class="fa-brands fa-instagram text-danger"></i>
+                </div>
+            </div>
+        </section>
+        <!-- section 02 -->
+        <section>
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><i class="fa-solid fa-spider text-danger wow animate__fadeInLeft"
+                            data-wow-duration="3s" data-wow-delay="0s" data-wow-iteration="1"></i></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#s01">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s04">手工大水餃介紹</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s08">水餃口味介紹</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s09">水餃收費及訂購方式</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    水餃簡介與歷史
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#s05">水餃歷史</a></li>
+                                    <li><a class="dropdown-item" href="#s06">店家資訊</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#s07"></a>水餃創作起源及品牌介紹</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s10">擴大徵才</a>
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">登入</button>
+                            <button class="btn btn-secondary" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">註冊</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <!-- loginModal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-warning">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">會員登入</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="" class="form-check-label">帳號</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-check-label">密碼</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">重置</button>
+                        <button type="button" class="btn btn-primary">送出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- registerModal -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header bg-success">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">會員註冊</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row timeline-section">
+                            <div class="col-6">
+                                <div class="h3 fw-900 text-center">會員守則</div>
+                                <p>1.個人資料保護： 會員註冊時，請提供正確、真實的個人資訊。這包括姓名、聯絡方式、地址等。我們承諾保護您的個人資料，並僅在必要時使用，絕不會出售或分享給第三方。</p>
+                                <p>賬戶安全： 請設置安全的密碼，並定期更換。不要與他人分享您的帳戶信息，包括密碼和登錄名。我們建議使用含有字母、數字和特殊字符的複雜密碼，以確保您的賬戶安全。</p>
+                                <p>使用規範： 作為會員，您應該遵守使用規則和條款。這包括不發表具有攻擊性、淫穢、歧視性或非法內容，不從事任何違法活動，以及不侵犯他人的知識產權。</p>
+                                <p>隱私政策： 請詳細閱讀並理解我們的隱私政策。這將告訴您我們收集哪些信息、如何使用這些信息以及您的隱私權利。如果您有任何疑問，請隨時與我們的客服團隊聯繫。</p>
+                                <p>
+                                <h3></h3>以上是會員註冊守則，確保您的註冊過程順利且安全。</p>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" name="" id="">
+                                    <label for="" class="form-check-label">同意</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="nickname" class="form-label">姓名</label>
+                                    <input type="text" class="form-control " id="nickname" name="nickname"
+                                        placeholder="字數2~4字">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="age" class="form-label">年齡</label>
+                                    <input type="number" class="form-control" id="age" name="age" min="0" max="99"
+                                        placeholder="須年滿18">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-check-label">帳號</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-check-label">密碼</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-check-label">確認密碼</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-check-label">電子信箱</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">送出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section 03 -->
+        <section>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item bg-cover active"
+                        style="background-image: url(./images/boiled\ dumpling01.avif);height: 90vh;">
+                        <div class="carousel-caption d-none d-md-block caption-text">
+                            <h5 class="fw-900 text-danger">HOHO手工大水餃介紹01</h5>
+                            <p>"HOHO手工高麗菜大水餃"</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item bg-cover"
+                        style="background-image: url(./images/boiled\ dumpling02.avif);height: 90vh;">
+                        <div class="carousel-caption d-none d-md-block caption-text">
+                            <h5 class="fw-900 text-danger">HOHO手工大水餃介紹02</h5>
+                            <p>"HOHO手工韭菜大水餃"</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item bg-cover"
+                        style="background-image: url(./images/boiled\ dumpling03.avif);height: 90vh;">
+                        <div class="carousel-caption d-none d-md-block caption-text">
+                            <h5 class="fw-900 text-danger">HOHO手工大水餃介紹03</h5>
+                            <p>"HOHO手工鮮蝦大水餃"</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <!-- section 04 -->
+        <section id="s04">
+            <div class="row">
+                <div class="col-md-5"
+                    style="background-image: url(./images/boiled\ dumpling04.avif); height: 600px;background-attachment: fixed; background-position: -500px 200px; background-size: cover;">
+                </div>
+                <div class="col-md-7 p-5">
+                    <h1>西元2020年 <span class="text-success">中部首選</span></h1>
+                    <h1 class="mb-3 bg-warning">純手工自製的大水餃</h1>
+                    對於喜歡家鄉味水餃的人，很適合訂購我的水餃，我是一個喜歡水餃而去做水餃的人，從小時候與母親包水餃記憶中的味道去做出現在的水餃味道，完全純手工製作，也想讓自家人吃的安心吃的放心，希望這樣的味道與大家分享。
+                    </p>
+                    <p class="mb-1 bg-danger">
+                        純手工製作，菜肉比例完美，低脂少油，皮薄餡多，內餡飽滿紮實，味美鮮嫩多汁，無添加任何化學成份，如防腐劑等…，吃的健康安心。
+                    </p>
+                    <div class="mb-1 wow animate__zoomInUp" data-wow-duration="2s" data-wow-delay="2s"
+                        data-wow-iteration="1">
+                        <h1>帶您的嘴，享受大水餃</h1>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-3">
+                            <h4>年均出貨</h4>
+                            <h2 class="fw-900 text-danger counter01">50000 <span class="h4 text-muted">/顆</span></h2>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>五星數目</h4>
+                            <h2 class="fw-900 text-warning counter02">99 <span class="h4 text-muted">/項</span></h2>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>專業認證</h4>
+                            <h2 class="fw-900 text-primary counter03">1 <span class="h4 text-muted">/項</span></h2>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>公司據點</h4>
+                            <h2 class="fw-900 text-info counter04">1 <span class="h4 text-muted">/個</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 05 -->
+        <section id="s05" class="bg-dark bg-cover"
+            style="background-image: url(./images/boiled\ dumpling05.avif); background-attachment: fixed;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-white py-5 me-auto">
+                        <div class="text-bg-dark rounded rounded-4 shadow-lg p-3">
+                            <h2>水餃歷史介紹</h2>
+                            <p>水餃作為一道傳統的中國美食，具有悠久的歷史。其歷史可以追溯到兩千多年前的東漢時期，當時的水餃形狀與現在相似，但餡料成分略有不同。
+
+                                最初的水餃是用麵粉和水製成的麵皮，包裹著魚肉或肉餡，然後烹煮而成。在漢朝，人們將這種食物稱為“角子”，後來逐漸演變為“餃子”。
+                                
+                                水餃在中國的各個地區流行，並逐漸發展出不同的口味和變化。例如，在北方地區，人們喜歡吃煮水餃，而在南方地區，則更傾向於吃蒸水餃或煎水餃。
+                                
+                                隨著時間的推移，水餃的製作技術和口味也不斷發展和改進。現代水餃的餡料已經多樣化，除了傳統的豬肉餡外，還有牛肉、海鮮、蔬菜等各種口味的選擇，滿足了不同人群的口味需求。
+                                
+                                此外，水餃也逐漸走出了中國，成為了全球性的美食。在世界各地的中餐館，人們都可以品嚐到這道美味的中國特色小吃。
+                                
+                                總的來說，水餃作為中國的傳統美食之一，承載著悠久的歷史和文化，並且在世界各地受到了人們的喜愛和推崇。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="timeline-section">
+                            <div class="row mt-3 align-items-center timeline-section-pointer">
+                                <div class="col-md-6 text-center">
+                                    <div class="mytext">
+                                        <div class="h3 text-danger fw-900">確定訂購口味和取貨日期及數量：<small
+                                                class="list-unstyled text-bg-primary"></small></div>
+                                        <ul class="list-unstyled text-bg-primary">
+                                            <li>定訂購口味和取貨日期及數量。</li>
+                                            <li>HOHO手工大水餃口味目前有三種。</li>
+                                            <li>1. HOHO手工高麗菜大水餃2.HOHO手工韭菜大水餃。3. HOHO手工鮮蝦大水餃</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="myimg bg-cover"
+                                        style="background-image: url(./images/韭菜水餃.jpg); height: 360px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3 align-items-center flex-row-reverse timeline-section-pointer">
+                                <div class="col-md-6 text-center">
+                                    <div class="mytext">
+                                        <div class="h3 text-danger fw-900">下單水餃口味及數量確認
+                                            :<small class="text-muted"></small></div>
+                                        <ul class="list-unstyled text-bg-primary">
+                                            <li>確定水餃口味及數量。</li>
+                                            <li>計算價錢。</li>
+                                            <li>可選擇寄送方式及地點。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="myimg bg-cover"
+                                        style="background-image: url(./images/鮮蝦水餃.jpg); height: 360px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3 align-items-center timeline-section-pointer">
+                                <div class="col-md-6 text-center">
+                                    <div class="mytext">
+                                        <div class="h3 text-danger fw-900">確認水餃訂單及聯絡及寄送方式:<small
+                                                class="text-muted"></small></div>
+                                        <ul class="list-unstyled text-bg-primary">
+                                            <li>確認水餃口味。</li>
+                                            <li>確認水餃數量。</li>
+                                            <li>確認寄送地點。</li>
+                                            <li>確定付款方式</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="myimg bg-cover"
+                                        style="background-image: url(./images/高麗菜水餃.jpg); height: 360px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 06 -->
+        <section id="s06" class="bg-dark py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-white text-center wow animate__swing" data-wow-duration="2s"
+                        data-wow-delay="1s" data-wow-iteration="1">
+                        <i class="fa-solid fa-gift fa-8x text-warning mb-3"></i>
+                        <h2 class="fw-900">關於我們</h2>
+                        <li>帶你填飽肚子。</li>
+                        <li>帶你享受美味。</li>
+                        <li>帶你填滿口慾。</li>
+                        <li>帶你嚐家鄉味。</li>
+                    </div>
+                    <div class="col-md-4 text-white text-center wow animate__swing" data-wow-duration="2s"
+                        data-wow-delay="1s" data-wow-iteration="1">
+                        <i class="fa-solid fa-republican fa-8x text-danger mb-3"></i>
+                        <h2 class="fw-900">店家資訊</h2>
+                        <li>店家資訊：HOHO手工大水餃</li>
+                        <li>營業時間：AM：09：00-PM：18：00。</li>
+                        <li>地址：台中市南屯區嶺東菜市場。</li>
+                    </div>
+                    <div class="col-md-4 text-white text-center wow animate__swing" data-wow-duration="2s"
+                        data-wow-delay="1s" data-wow-iteration="1">
+                        <i class="fa-solid fa-democrat fa-8x text-secondary mb-3"></i>
+                        <h2 class="fw-900">經營理念</h2>
+                        <li>保持材料新鮮。</li>
+                        <li>持續讓大家嚐到水餃的美味。</li>
+                        <li>可想到自己家鄉。</li>
+                        <li>讓大家一口接一口吃水餃。</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 07 -->
+        <section id="s07" class="bg-light" style="position: relative;">
+            <div class="row">
+                <div class="col-md-5 bg-cover wow animate__rollIn"
+                    style="background-image: url(./images/boiled\ dumpling08.avif); position: absolute; top: 0; bottom: 0;"
+                    data-wow-duration="2s" data-wow-delay="0s" data-wow-iteration="1"></div>
+            </div>
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-md-7 text-s07">
+                        <h2 class="fw-900">水餃故事</h2>
+                        <p>純手工自製的大水餃</h1>
+                            對於喜歡家鄉味水餃的人，很適合訂購我的水餃，我是一個喜歡水餃而去做水餃的人，從小時候與母親包水餃記憶中的味道去做出現在的水餃味道，完全純手工製作，也想讓自家人吃的安心吃的放心，希望這樣的味道與大家分享。
+                        </p>
+                        <button class="btn btn-outline-primary">查看更多</button>
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <h3 class="fw-500">品牌形象</h3>
+                                <p>以「服務至上」為核心價值，以品質和信任為基石，水餃，香氣撲鼻，色澤誘人，外皮薄而韌，包裹著豐富的餡料；一口咬下，湯汁四溢，鮮美多汁，口感豐富；烹調方式多樣，蒸、煮、煎均可，每種口感皆有獨特風味；搭配醋、辣椒油或醬油，味道更加濃郁；無論是外帶還是店內享用，都能品味到家的味道，滿足你的味蕾；水餃，不僅是一種美食，更是一種文化的體現，讓人流連忘返，回味無窮。
+
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="fw-500">品牌價值</h3>
+                                <p>我們的品牌不僅價值高昂，而且具有深厚的歷史和文化底蘊。它代表著傳統手工藝的精湛技藝和對食材品質的堅持。每一顆水餃都是匠人們用心製作的絕妙之作，外皮薄而韌，餡料鮮美豐富，令人回味無窮。這個品牌在市場上享有極高的聲譽，成為消費者信賴和喜愛的選擇。無論是在品質控制上還是在品牌形象上，它都堅持著最高標準，為消費者提供卓越的產品和服務。這個品牌不僅價值連城，更是代表著一種生活品味和文化認同，成為人們追求的美食之一。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 08 -->
+        <section id="s08">
+            <div class="container">
+                <div class="display-3 text-info fw-900 text-center my-3 wow animate__slideInUp" data-wow-duration="1s"
+                    data-wow-delay="1s" data-wow-iteration="2">水餃口味介紹</div>
+                <div class="row">
+                    <div class="col-md-6 mt-3">
+                        <div class="d-flex">
+                            <i class="fa-regular fa-handshake fa-7x me-4 mt-5"></i>
+                            <div>
+                                <div class="h2 fw-900 text-center">HOHO手工高麗菜大水餃</div>
+                                <p>高麗菜水餃，是一種以高麗菜為主要成分的水餃品種。它將新鮮的高麗菜切碎，與其他餡料混合填入水餃皮中，再經過烹調而成。這種水餃具有獨特的風味和口感。
+
+                                    首先，高麗菜的加入使得水餃的口感更加清爽爽脆，同時增添了豐富的營養價值。高麗菜本身富含維生素C、纖維和抗氧化劑，有助於增強免疫力和促進消化健康。
+
+                                    其次，高麗菜水餃的外皮薄而韌，內餡豐富多汁，每一口都能品嚐到高麗菜的清香和餡料的美味。烹調方式多樣，可以蒸、煮或者煎，每種方式都能展現出高麗菜水餃獨特的風味。
+
+                                    最後，高麗菜水餃不僅口感美味，而且簡單易做，適合各種人群和場合。無論是作為家常菜品還是節日美食，都能為人們帶來滿足和愉悅的享受。
+
+                                    總的來說，高麗菜水餃以其清爽的口感、豐富的營養和獨特的風味，成為人們喜愛的美食之一，值得一試。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="d-flex">
+                            <i class="fa-regular fa-handshake fa-7x me-4 mt-5"></i>
+                            <div>
+                                <div class="h2 fw-900 text-center">HOHO手工韭菜大水餃</div>
+                                <p> 韭菜水餃是一道經典的中國美食，以新鮮的韭菜為主要食材製成。這款水餃有著獨特的香氣和口感，讓人一試難忘。
+
+                                    首先，韭菜水餃的餡料中加入了新鮮的韭菜，為整個水餃帶來了獨特的風味。韭菜本身帶有濃郁的香氣和獨特的味道，與其他餡料混合後，使得水餃更加美味可口。
+
+                                    其次，韭菜水餃的外皮薄而滑嫩，內餡豐富多汁。每一口咬下去，都能感受到韭菜的清香和餡料的鮮美，令人回味無窮。
+
+                                    此外，韭菜水餃烹調方式多樣，可以蒸、煮或者煎，每種方式都能展現出不同的風味特色。搭配上醋、辣椒油或醬油，更能提升整體的口感。
+
+                                    總的來說，韭菜水餃以其獨特的風味和口感，成為許多人喜愛的美食之一。無論是作為家常菜還是節日美食，都能帶來滿足和愉悅的享受。試一試這道美味的韭菜水餃，絕對會讓你愛不釋手。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mt-3">
+                        <div class="d-flex">
+                            <i class="fa-regular fa-handshake fa-7x me-4 mt-5"></i>
+                            <div>
+                                <div class="h2 fw-900 text-center">HOHO手工鮮蝦大水餃</div>
+                                <p>鮮蝦水餃是一道美味可口的中式點心，以鮮嫩的蝦肉為主要原料製成。這款水餃擁有獨特的風味和口感，讓人一嚐難忘。
+
+                                    首先，鮮蝦水餃的餡料主要由鮮嫩的蝦肉製成，口感豐富嫩滑，散發著鮮美的海鮮香氣。蝦肉本身帶有天然的甜味和鮮味，與其他調味料混合後，使得水餃更加美味可口。
+
+                                    其次，鮮蝦水餃的外皮薄而滑嫩，內餡豐富多汁。每一口咬下去，都能感受到蝦肉的鮮美和餡料的香氣，令人回味無窮。
+
+                                    此外，鮮蝦水餃的烹調方式多樣，可以蒸、煮或者煎，每種方式都能展現出不同的風味特色。搭配上醋、辣椒油或醬油，更能提升。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="d-flex">
+                            <i class="fa-regular fa-handshake fa-7x me-4 mt-5"></i>
+                            <div>
+                                <div class="h2 fw-900 text-center">HOHO手工泡菜大水餃</div>
+                                <p>泡菜水餃是一種結合了中國和韓國風味的美食，將泡菜與水餃結合在一起，創造出獨特而美味的口感。
+
+                                    首先，泡菜的加入為水餃帶來了獨特的酸辣風味和清爽口感。泡菜本身具有豐富的發酵風味和獨特的香氣，與水餃的餡料相互融合，形成了新的美味風味。
+
+                                    其次，泡菜水餃的外皮薄而滑嫩，內餡豐富多汁。每一口咬下去，都能感受到泡菜的酸辣味道和餡料的鮮美，令人回味無窮。
+
+                                    此外，泡菜水餃的烹調方式多樣，可以蒸、煮或者煎，每種方式都能展現出不同的風味特色。搭配上醋、辣椒油或醬油，更能提升整體的口感。
+
+                                    總的來說，泡菜水餃結合了兩種不同的美食文化，以其獨特的風味和口感，成為許多人喜愛的美食之一。無論是作為家常菜還是節日美食，都能帶來滿足和愉悅的享受。試一試這道美味的泡菜水餃，絕對會讓你愛不釋手。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section 09 -->
+        <section id="s09" style="position: relative;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 text-s09">
+                        <dl class="row">
+                            <dt class="col-sm-3">收費方案</dt>
+                            <dd class="col-sm-9">刷卡/現金/匯款</dd>
+
+                            <dt class="col-sm-3">訂購口味及數量</dt>
+                            <dd class="col-sm-9">
+                                <p>1. HOHO手工高麗菜水餃/30顆，210元。<br>
+                                    2. HOHO手工韭菜水餃/30顆，210元。<br>
+                                    3. HOHO手工鮮蝦水餃/30顆，330元。<br>
+                                    4. HOHO手工泡菜水餃/30顆，210元。</p>
+                                <p>
+                                    下單前可先與店家聊聊。</p>
+                            </dd>
+
+                            <dt class="col-sm-3">訂購方式</dt>
+                            <dd class="col-sm-9">
+                                1. 蝦皮下單。
+                                2. line下單。
+                                3. 電話下單。
+                                4. 到店購買。
+                            </dd>
+
+                            <dt class="col-sm-3 text-truncate">Ordering method and introduction</dt>
+                            <dd class="col-sm-9">If you have any questions, please contact the store
+                            </dd>
+
+                            <dt class="col-sm-3">Nesting</dt>
+                            <dd class="col-sm-9">
+                                <dl class="row">
+                                    <dt class="col-sm-4">Nested definition list</dt>
+                                    <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list
+                                        inside your definition list.</dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col-md-5 bg-cover"
+                    style="background-image: url(./images/cabbage10.jpg); position: absolute; top: 0; bottom: 0;"></div>
+            </div>
+        </section>
+
+        <!-- section 10 -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.6949369184995!2d120.61208470000001!3d24.1473493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e7093ab9907%3A0x8e0904247d6dbfe5!2z5aSn5ba65p2x6buD5piP5biC5aC0!5e0!3m2!1szh-TW!2stw!4v1716515071878!5m2!1szh-TW!2stw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="" class="form-label">姓名</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">電話</label>
+                            <input type="phone" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">口味訂購數量</label>
+                            <input type="number" min="1" max="10" value="2" class="form-control">
+                        </div>
+
+                        <div class="text-end mt-4">
+                            <button class="btn btn-outline-secondary">取消</button>
+                            <button class="btn btn-primary">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 11 -->
+        <section id="s10">
+            <div class="row">
+                <div class="col-md-6 bg-cover" style="background-image: url(./images/people06.avif); height: 360px;">
+                    <div class="row">
+                        <div class="col-md-7 p-5 wow animate__tada" data-wow-duration="2s" data-wow-delay="1s"
+                            data-wow-iteration="1">
+                            <small class="badge text-bg-danger p-2">加入我們</small>
+                            <h3 class="text-bg-light">應徵員工1名</h3>
+                            <p class="text-bg-light">
+                                工作內容:親愛的應徵者，感謝您對我們手工水餃店的職位表現出興趣。我們是一家致力於提供高品質手工水餃店，以新鮮、美味和傳統的口味為顧客提供愉悅的用餐體驗。現在，我們正在尋找熱情、有才華且具有團隊精神的員工加入我們的團隊。職位:
+                                手工水餃店員工、工作地點:台中市南屯區嶺東菜市場、工作職責:負責製作各種口味的手工水餃，包括肉類、素食和特色口味。確保食品製作符合標準和規定，並保持一致的口味和質量。
+                                我們期待的應徵者擁有以下資格和特質:
+                                對食品製作有熱情和經驗，尤其是水餃或相關食品。
+                                具有團隊合作精神，能夠在快節奏的環境中工作。
+                                具有良好的溝通能力和顧客服務技巧。
+                                具有衛生意識和工作細心。
+                                如果您對這個職位感興趣且符合以上要求，請將您的履歷和求職信發送給我們，期待新成員的加入！</p>
+                            <button class="btn btn-outline-warning">應徵此工作</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-cover" style="background-image: url(./images/people05.avif); height: 360px;">
+                    <div class="row">
+                        <div class="col-md-7 p-5 wow animate__tada" data-wow-duration="2s" data-wow-delay="1s"
+                            data-wow-iteration="1">
+                            <small class="badge text-bg-danger p-2">加入我們</small>
+                            <h3 class="text-bg-light">應徵外送員1名</h3>
+                            <p class="text-bg-light">工作內容:
+                                工作內容包括:協助整理貨物及外出送貨。</p>
+                            <button class="btn btn-outline-warning">應徵此工作</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 12 -->
+        <section>
+            <div class="display-5 text-warning fw-300 text-center my-2 wow animate__slideInUp" data-wow-duration="1s"
+                data-wow-delay="1s" data-wow-iteration="2">熱門水餃口味</div>
+            <div class="row">
+                <div class="col-md-4 bg-cover"
+                    style="background-image: url(./images/高麗菜水餃.jpg); height: 360px;">
+                    <div class="row">
+                        <div class="col-md-7 p-5 wow animate__tada" data-wow-duration="2s" data-wow-delay="1s"
+                            data-wow-iteration="1">
+                            <h3 class="text-bg-light">HOHO手工高麗菜水餃</h3>
+                            <p class="text-bg-light">咬一口吃的到滿滿清脆的高麗菜，讓人口齒留香。
+                            </p>
+                            <button class="btn btn-outline-primary">查看更多</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 bg-cover" style="background-image: url(./images/韭菜水餃.jpg); height: 360px;">
+                    <div class="row">
+                        <div class="col-md-7 p-5 wow animate__tada" data-wow-duration="2s" data-wow-delay="1s"
+                            data-wow-iteration="1">
+                            <h3 class="text-bg-warning">HOHO手工韭菜大水餃</h3>
+                            <p class="text-bg-light">
+                                濃濃的韭菜味伴隨麻油香味，多汁，完美的融合搭配，讓人一口接一口。</p>
+                            <button class="btn btn-outline-warning">查看更多</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 bg-cover" style="background-image: url(./images/鮮蝦水餃.jpg); height: 360px;">
+                    <div class="row">
+                        <div class="col-md-7 p-5 wow animate__tada" data-wow-duration="2s" data-wow-delay="1s"
+                            data-wow-iteration="1">
+                            <h3 class="text-bg-primary">HOHO手工鮮蝦大水餃</h3>
+                            <p class="text-bg-light">
+                                新鮮剝殼的大白蝦，自己剝殼不泡藥水，吃的到完整整隻蝦的口感。</p>
+                            <button class="btn btn-outline-warning">查看更多</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 13 -->
+        <section>
+            <div class="container bg-info">
+                <div class="display-3 text-dark fw-900 text-center my-3">常見問題F&Q</div>
+                <div class="row">
+                    <div class="col-md-6 mt-3">
+                        <div class="d-flex">
+                            <i class="fa-regular fa-handshake fa-7x me-4 mt-5"></i>
+                            <div>
+                                <div class="h2 fw-900 text-center">下單注意事項？</div>
+                                <p>請與店家確認訂單內容數量及出貨日期。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="d-flex">
+                            <i class="fa-regular fa-handshake fa-7x me-4 mt-5"></i>
+                            <div>
+                                <div class="h2 fw-900 text-center">我需要支付額外費用嗎？</div>
+                                <p> 冷凍宅配需支付冷凍宅配費用。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mt-3">
+                        <div class="d-flex">
+                            <i class="fa-regular fa-handshake fa-7x me-4 mt-5"></i>
+                            <div>
+                                <div class="h2 fw-900 text-center">轉帳問題？</div>
+                                <p>請確認費用付款及轉帳是否成功。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="d-flex">
+                            <i class="fa-regular fa-handshake fa-7x me-4 mt-5"></i>
+                            <div>
+                                <div class="h2 fw-900 text-center">我可以取消訂單嗎？</div>
+                                <p>請在店家未寄出貨物前取消訂單。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 14 -->
+        <section>
+            <div class="container">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Power By 跨平台班級製作2024.05</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">水餃介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">訂購種類</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">確認訂單與付款</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+        <script>
+            $(function () {
+                //wowjs
+                new WOW().init();
+                //counter up2
+                const counterUp = window.counterUp.default
+
+                const callback = entries => {
+                    entries.forEach(entry => {
+                        const el = entry.target
+                        if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+                            counterUp(el, {
+                                duration: 2000,
+                                delay: 16,
+                            })
+                            el.classList.add('is-visible')
+                        }
+                    })
+                }
+
+                const IO = new IntersectionObserver(callback, { threshold: 1 })
+
+                const el01 = document.querySelector('.counter01')
+                IO.observe(el01)
+
+                const el02 = document.querySelector('.counter02')
+                IO.observe(el02)
+
+                const el03 = document.querySelector('.counter03')
+                IO.observe(el03)
+
+                const el04 = document.querySelector('.counter04')
+                IO.observe(el04)
+            });
+        </script>
+    </body>
+
+</html>
